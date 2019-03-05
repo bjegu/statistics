@@ -10,5 +10,13 @@ package pl.polsl.biegdominika.view;
  * @author Dominika
  */
 public class View {
+
+    public void greeting() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String askNumbers() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
