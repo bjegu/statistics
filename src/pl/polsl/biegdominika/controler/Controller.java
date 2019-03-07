@@ -35,6 +35,7 @@ public class Controller {
             }
             //create collection of input numbers from sting
             List<Double> numbers = convertNumbers(inputValues);
+            System.out.println(numbers);
         }
     }
  
@@ -44,8 +45,9 @@ public class Controller {
         List<Double> numbersConverted = new ArrayList<>();
         //split strings splitted by the space 
         String[] array = inputValues.split(" ");
+        //converting string value to separated double values (parseDouble) and adding it to the colleciton numbersConverted (add)
         for(String value: array){
-            
+            numbersConverted.add(Double.parseDouble(value));
         }
         return numbersConverted;
     }
