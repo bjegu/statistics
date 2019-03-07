@@ -15,16 +15,16 @@ public class View {
     public void greeting() {
         System.out.println("Welcome to program calculating some statisical cool stuff" +'\n');
         
-
-//To change body of generated methods, choose Tools | Templates.
     }
 
     public String askNumbers() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-       System.out.println("Please type numbers seperated by the space"+'\n');
+       System.out.println("Please type numbers seperated by the space or type end to finish"+'\n');
         Scanner scanner = new Scanner(System.in);
-        String userNumbers = scanner.next();
+        String userNumbers = scanner.nextLine();
         System.out.println("Your numbers are:"+userNumbers);
+       // System.out.println("Your numbers are:"+userNumbers);
         
         return userNumbers;
     }
+}

@@ -41,12 +41,12 @@ public class Controller {
     //method
     private List<Double> convertNumbers(String inputValues) {
         //interface
-        List<Double> numbersCoverted = new ArrayList<>();
+        List<Double> numbersConverted = new ArrayList<>();
         //split strings splitted by the space 
         String[] array = inputValues.split(" ");
         for(String value: array){
             
         }
-        
+        return numbersConverted;
     }
 }
