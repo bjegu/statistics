@@ -34,12 +34,12 @@ public class Controller {
                 continue;
             }
             //create collection of input numbers from sting
-            List<Double> numbers = covertNumbers(inputValues);
+            List<Double> numbers = convertNumbers(inputValues);
         }
     }
-
+ 
     //method
-    private List<Double> covertNumbers(String inputValues) {
+    private List<Double> convertNumbers(String inputValues) {
         //interface
         List<Double> numbersCoverted = new ArrayList<>();
         //split strings splitted by the space 
