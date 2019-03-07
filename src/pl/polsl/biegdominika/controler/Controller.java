@@ -5,6 +5,7 @@
  */
 package pl.polsl.biegdominika.controler;
 
+import java.util.ArrayList;
 import java.util.List;
 import pl.polsl.biegdominika.view.View;
 
@@ -39,10 +40,13 @@ public class Controller {
 
     //method
     private List<Double> covertNumbers(String inputValues) {
+        //interface
+        List<Double> numbersCoverted = new ArrayList<>();
         //split strings splitted by the space 
         String[] array = inputValues.split(" ");
         for(String value: array){
             
         }
+        
     }
 }

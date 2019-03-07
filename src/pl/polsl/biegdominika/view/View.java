@@ -12,11 +12,15 @@ package pl.polsl.biegdominika.view;
 public class View {
 
     public void greeting() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Welcome to program calculating some statisical cool stuff" +'\n');
+        System.out.println("Please type numbers seperated by the space"+'\n');
+
+//To change body of generated methods, choose Tools | Templates.
     }
 
     public String askNumbers() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println
     }
     
 }
