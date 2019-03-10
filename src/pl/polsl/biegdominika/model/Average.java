@@ -11,7 +11,8 @@ import java.util.List;
  *
  * @author Dominika
  */
-public class Average {
+public class Average implements StatisticInterface{
+    
 
     private final double average;
     Average(List<Double> data) {
@@ -29,6 +30,19 @@ public class Average {
     //getter generated automatically in order to pass the average variable to other classes
     public double getAverage() {
         return average;
+    }
+
+    //methods inserted by implementation of StatisticInterface
+    @Override
+    public String getName() {
+        //returning name of the calculated value
+    return "Average";
+    }
+
+    @Override
+    public String getValue() {
+        //the double variable must be converted into the string so it can be showed easier
+        return String.valueOf(average);
     }
     
 }

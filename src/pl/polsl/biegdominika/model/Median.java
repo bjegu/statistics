@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Dominika
  */
-public class Median {
+public class Median implements StatisticInterface{
 
     private final double median;
     Median(List<Double> data) {
@@ -34,6 +34,20 @@ public class Median {
 
     public double getMedian() {
         return median;
+    }
+
+        //methods inserted by implementation of StatisticInterface
+
+    @Override
+    public String getName() {
+  //returning name of the calculated value
+    return "Median";    
+    }
+
+    @Override
+    public String getValue() {
+//the double variable must be converted into the string so it can be showed easier
+        return String.valueOf(median);
     }
     
 }

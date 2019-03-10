@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Dominika
  */
-public class StandardDeviation {
+public class StandardDeviation implements StatisticInterface {
 
     private final double standardDeviation;
     private final Average average;
@@ -42,6 +42,21 @@ public class StandardDeviation {
     //get generated in order to pass the variable to other classes
     public double getStandardDeviation() {
         return standardDeviation;
+    }
+
+    
+        //methods inserted by implementation of StatisticInterface
+
+    @Override
+    public String getName() {
+//returning name of the calculated value
+    return "Standard Deviation"; 
+    }
+
+    @Override
+    public String getValue() {
+//the double variable must be converted into the string so it can be showed easier
+        return String.valueOf(standardDeviation);
     }
     
     
