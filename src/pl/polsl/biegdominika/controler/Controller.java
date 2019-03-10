@@ -7,6 +7,7 @@ package pl.polsl.biegdominika.controler;
 
 import java.util.ArrayList;
 import java.util.List;
+import pl.polsl.biegdominika.model.StatisticInterface;
 import pl.polsl.biegdominika.model.Statistics;
 import pl.polsl.biegdominika.view.View;
 
@@ -21,7 +22,7 @@ public class Controller {
     private final View view = new View();
     /*
     public method - start running the app
-    app asks the user for the next numbers to be calculated
+    and keeps the program running
     */
     public void run(){
         //call greeting method from class view
@@ -39,6 +40,11 @@ public class Controller {
             System.out.println(numbers);
             //constructor = create new statistics object
             Statistics statistics = new Statistics (numbers);
+            //for each avalible statistic call its displaying in view
+            for(StatisticInterface stat: statistics.listOfStats()){
+                view.showStat(stat.getName(),stat.getValue());
+                
+            }
         }
     } 
  
@@ -54,4 +60,6 @@ public class Controller {
         }
         return numbersConverted;
     }
+    
+    
 }

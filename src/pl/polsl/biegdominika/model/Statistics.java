@@ -5,6 +5,7 @@
  */
 package pl.polsl.biegdominika.model;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -30,4 +31,9 @@ public class Statistics {
          standardDeviation = new StandardDeviation(data,average);
     }
     
+    
+    //method which returns a collection of statistics avalible
+    public List<StatisticInterface> listOfStats(){
+     return Arrays.asList(average,median,standardDeviation);
+}
 }

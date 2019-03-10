@@ -27,4 +27,9 @@ public class View {
         
         return userNumbers;
     }
+
+    //method showing the values of statistics passed by the controller
+    public void showStat(String name, String value) {
+        System.out.println(name+": "+value);
+    }
 }
