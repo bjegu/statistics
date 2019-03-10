@@ -7,6 +7,7 @@ package pl.polsl.biegdominika.controler;
 
 import java.util.ArrayList;
 import java.util.List;
+import pl.polsl.biegdominika.model.Statistics;
 import pl.polsl.biegdominika.view.View;
 
 /**
@@ -36,12 +37,14 @@ public class Controller {
             //create collection of input numbers from sting
             List<Double> numbers = convertNumbers(inputValues);
             System.out.println(numbers);
+            //constructor = create new statistics object
+            Statistics statistics = new Statistics (numbers);
         }
-    }
+    } 
  
-    //method
+    //method which should convert sring with nymbers splitted by space to a collection of doubles numbers
     private List<Double> convertNumbers(String inputValues) {
-        //interface
+        //interface creating the collection (constructor)
         List<Double> numbersConverted = new ArrayList<>();
         //split strings splitted by the space 
         String[] array = inputValues.split(" ");

@@ -17,7 +17,6 @@ public class View {
         System.out.println("Welcome to program calculating some statisical cool stuff" +'\n');
         
     }
-
     
  // method for asking, saving and displaying input values from the user   
     public String askNumbers() {
