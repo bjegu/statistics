@@ -36,6 +36,12 @@ public class Controller {
                 isRunning = false;
                 continue;
             }
+            /*
+            chceckin the input given by the user, changing all double(and more) spaces into single space
+            */
+            if(inputValues.contains("  ")){
+                inputValues = inputValues.trim().replaceAll("\\s+", " ");
+            }
             //check input with regular expression for only numerical , dot or space
             if (!inputValues.matches("^[0-9 .]+$")) {
                 view.inputError();
@@ -50,6 +56,7 @@ public class Controller {
                     view.showStat(stat.getName(), stat.getValue());
                 }
             }
+            
         }
     }
 

@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class View {
 
- //method for welcome the user :D
+ //method for welcome the user
     public void greeting() {
         System.out.println("Welcome to program calculating some statisical cool stuff" +'\n');
         
