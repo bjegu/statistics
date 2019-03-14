@@ -22,13 +22,16 @@ public class Median implements StatisticInterface{
        
         //check wheter the size of a data collection is even or odd number,
         //then calculate the median 
-        if (n%2==0){
+        if (n==1){
+            median=data.get(0);
+        }
+        else if (n%2==0){
          double x1=data.get(n/2);
          double x2=data.get((n/2)-1);
          median=(x1+x2)/2;
        }
         else{
-            median=data.get((n/2)-1);
+            median=data.get(n/2);
         }
     }
 

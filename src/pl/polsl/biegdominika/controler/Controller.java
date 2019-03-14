@@ -37,31 +37,42 @@ public class Controller {
                 continue;
             }
             /*
-            chceckin the input given by the user, changing all double(and more) spaces into single space
-            */
-            if(inputValues.contains("  ")){
+             chceckin the input given by the user, changing all double(and more) spaces into single space
+             */
+            if (inputValues.contains("  ")) {
                 inputValues = inputValues.trim().replaceAll("\\s+", " ");
             }
-            //check input with regular expression for only numerical , dot or space
-            if (!inputValues.matches("^[0-9 .]+$")) {
+            //check input with regular expression for numbers, minuses, dot or space only
+            if (!inputValues.matches("^[0-9 .-]+$")) {
                 view.inputError();
             } else {
-                //create collection of input numbers from sting
-                List<Double> numbers = convertNumbers(inputValues);
-                System.out.println(numbers);
-                //constructor = create new statistics object
-                Statistics statistics = new Statistics(numbers);
-                //for each avalible statistic call its displaying in view
-                for (StatisticInterface stat : statistics.listOfStats()) {
-                    view.showStat(stat.getName(), stat.getValue());
+                try {
+
+                    //create collection of input numbers from sting
+                    List<Double> numbers = convertNumbers(inputValues);
+                    System.out.println(numbers);
+                    //constructor = create new statistics object
+                    Statistics statistics = new Statistics(numbers);
+                    //for each avalible statistic call its displaying in view
+                    for (StatisticInterface stat : statistics.listOfStats()) {
+                        view.showStat(stat.getName(), stat.getValue());
+                    }
+                } catch (NumberFormatException e) {
+                       view.inputException();
                 }
             }
-            
+
         }
     }
 
     //method which should convert sring with nymbers splitted by space to a collection of doubles numbers
-    private List<Double> convertNumbers(String inputValues) {
+    /**
+     * 
+     * @param inputValues
+     * @return
+     * @throws NumberFormatException 
+     */
+    private List<Double> convertNumbers(String inputValues) throws NumberFormatException {
         //interface creating the collection (constructor)
         List<Double> numbersConverted = new ArrayList<>();
         //split strings splitted by the space 

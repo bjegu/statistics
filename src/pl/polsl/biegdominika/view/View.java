@@ -32,9 +32,14 @@ public class View {
     public void showStat(String name, String value) {
         System.out.println(name+": "+value);
     }
-    // method alerting any user's mistakes
+    // methods alerting any user's mistakes
     public void inputError() {
         System.out.println("Error");
         System.out.println("Check if your input contains only numbers separated with spaces!");
+    }
+
+    public void inputException() {
+        System.out.println("Error");
+        System.out.println("Please check if your numbers are correct and separated by space!");
     }
 }
