@@ -9,10 +9,21 @@ import java.util.List;
  *  @version 1.0.0
  */
 public class Statistics {
-    
+/**
+ * list of double with the user's data
+ */
     private final List<Double> data;
+/**
+ * value of the average
+ */
     private final Average average;
+ /**
+  * value of the median
+  */
     private final Median median;
+/**
+ * value of the standard deviation
+ */
     private final StandardDeviation standardDeviation;
     
 /**

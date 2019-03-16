@@ -10,6 +10,9 @@ import java.util.List;
  */
 public class Median implements StatisticInterface{
 
+  /**
+   * value of median
+   */
     private final double median;
     /**
      * 

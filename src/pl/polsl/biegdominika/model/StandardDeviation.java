@@ -9,8 +9,13 @@ import java.util.List;
  * @version 1.0.0
  */
 public class StandardDeviation implements StatisticInterface {
-
+/**
+ * value of standard deviation
+ */
     private final double standardDeviation;
+/**
+ * value of average
+ */
     private final Average average;
     /**
      * Constructor

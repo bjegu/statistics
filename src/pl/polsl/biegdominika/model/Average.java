@@ -1,4 +1,3 @@
-
 package pl.polsl.biegdominika.model;
 
 import java.util.List;
@@ -10,7 +9,9 @@ import java.util.List;
  */
 public class Average implements StatisticInterface{
     
-
+/**
+ * value of average
+ */
     private final double average;
     /**
      * Calculating the value of the average

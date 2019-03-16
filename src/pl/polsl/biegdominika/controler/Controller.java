@@ -15,8 +15,13 @@ import pl.polsl.biegdominika.view.View;
  */
 public class Controller {
 
+    /**
+     * the condition of running the program
+     */
     private boolean isRunning = true;
-     //initialization of the viwew during the initialization of the controller
+    /**
+     * initialization of the viwew during the initialization of the controller
+     */
     private final View view = new View();
     
    /**
