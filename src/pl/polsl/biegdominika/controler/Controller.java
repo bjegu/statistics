@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pl.polsl.biegdominika.controler;
 
 import java.util.ArrayList;
@@ -12,19 +8,20 @@ import pl.polsl.biegdominika.model.Statistics;
 import pl.polsl.biegdominika.view.View;
 
 /**
- *
- * @author Dominika
+ * 
+ * @author Dominika Bieg
+ * @version 1.0.0
+ * The controller class - responsible for control flow of information and input control
  */
 public class Controller {
 
     private boolean isRunning = true;
-    // initialization of the viwew during the initialization of the controller
+     //initialization of the viwew during the initialization of the controller
     private final View view = new View();
-    /*
-     public method - start running the app
-     and keeps the program running
-     */
-
+    
+   /**
+    * public method run() - start running the app and keeps the program running
+    */
     public void run() {
         //call greeting method from class view
         view.greeting();
@@ -36,9 +33,9 @@ public class Controller {
                 isRunning = false;
                 continue;
             }
-            /*
-             chceckin the input given by the user, changing all double(and more) spaces into single space
-             */
+            
+             //chceckin the input given by the user, 
+            //changing all double(and more) spaces into single space
             if (inputValues.contains("  ")) {
                 inputValues = inputValues.trim().replaceAll("\\s+", " ");
             }
@@ -65,11 +62,11 @@ public class Controller {
         }
     }
 
-    //method which should convert sring with nymbers splitted by space to a collection of doubles numbers
     /**
+     * method which convert sring with numbers splitted by space given by the user to a collection of double numbers
      * 
      * @param inputValues
-     * @return
+     * @return numbersConverted - collection of double numbers given by the user 
      * @throws NumberFormatException 
      */
     private List<Double> convertNumbers(String inputValues) throws NumberFormatException {

@@ -1,21 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pl.polsl.biegdominika.model;
 
 import java.util.List;
 
 /**
- *
- * @author Dominika
+ * Class responsible for logic and calculating value of standard deviation
+ * @author Dominika Bieg
+ * @version 1.0.0
  */
 public class StandardDeviation implements StatisticInterface {
 
     private final double standardDeviation;
     private final Average average;
-    
+    /**
+     * Constructor
+     * @param data - list of doubles with value typed by the user
+     * @param average - the value of the average calculated in class average
+     */
     StandardDeviation(List<Double> data, Average average) {
 
       //field created in order to use value of the average in method deviation
@@ -30,7 +31,11 @@ public class StandardDeviation implements StatisticInterface {
        standardDeviation= Math.sqrt(sum/n);
         
     }
-    
+    /**
+     * method calcuating the deviation - first part of calculating the standard deviaiton
+     * @param value - single value from list od values inserted by the user
+     * @return Math.pow(diff, 2) - the value of the deviation rised to the power of 2
+     */
     private double deviation(Double value){
         
         //value from the stream-average from the average class
@@ -38,24 +43,30 @@ public class StandardDeviation implements StatisticInterface {
         //returns the difference of values from data and average raised tot eh power of 2
         return Math.pow(diff, 2);
     }
-
-    //get generated in order to pass the variable to other classes
+/**
+ * getter generated in order to pass the variable to other classes
+ * @return standardDeviation - the value of calucated standardDeviation
+ */
     public double getStandardDeviation() {
         return standardDeviation;
     }
 
     
-        //methods inserted by implementation of StatisticInterface
-
+//methods inserted by implementation of StatisticInterface
+    /**
+     * @return "Standard Deviation" - the name of calucated statistic
+     */
     @Override
     public String getName() {
 //returning name of the calculated value
     return "Standard Deviation"; 
     }
-
+/**
+ * 
+ * @return String.valueOf(standardDeviation) - the value of standard deviation converted into the string so it can be showed easier
+ */
     @Override
     public String getValue() {
-//the double variable must be converted into the string so it can be showed easier
         return String.valueOf(standardDeviation);
     }
     

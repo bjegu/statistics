@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pl.polsl.biegdominika.model;
 
 import java.util.Arrays;
 import java.util.List;
 
 /**
- *
- * @author Dominika
+ * Class statisctics with constructors of statistics
+ * @author Dominika Bieg
+ *  @version 1.0.0
  */
 public class Statistics {
     
@@ -19,7 +15,10 @@ public class Statistics {
     private final Median median;
     private final StandardDeviation standardDeviation;
     
-//constructor
+/**
+ * 
+ * @param numbers - list with data from user
+ */
     public Statistics(List<Double> numbers) {
 
         //point the new variable data (avalible for the class)
@@ -31,8 +30,10 @@ public class Statistics {
          standardDeviation = new StandardDeviation(data,average);
     }
     
-    
-    //method which returns a collection of statistics avalible
+    /**
+     * 
+     * @return Arrays.asList(average,median,standardDeviation) - a collection of statistics avalible
+     */
     public List<StatisticInterface> listOfStats(){
      return Arrays.asList(average,median,standardDeviation);
 }

@@ -1,34 +1,39 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pl.polsl.biegdominika.view;
 
 import java.util.Scanner;
 /**
- *
- * @author Dominika
+ * 
+ * @author Dominika Bieg
+ * @version 1.0.0
  */
 public class View {
 
- //method for welcome the user
+ /**
+  * method welcoming the user
+  */
     public void greeting() {
-        System.out.println("Welcome to program calculating some statisical cool stuff" +'\n');
+        System.out.println("Welcome to program calculating some statistical cool stuff" +'\n');
         
     }
     
- // method for asking, saving and displaying input values from the user   
+ /**
+  * Method for asking, saving and displaying input values from the user 
+  * @return userNumbers - user input in string format
+  */  
     public String askNumbers() {
-       System.out.println("Please type numbers seperated by the space or type end to finish"+'\n');
+       System.out.println("Please type in numbers seperated by the space or end to finish"+'\n');
         Scanner scanner = new Scanner(System.in);
         String userNumbers = scanner.nextLine();
-        System.out.println("Your numbers are:"+userNumbers);
         
         return userNumbers;
     }
 
-    //method showing the values of statistics passed by the controller
+    /**
+     * method showing the values of statistics passed by the controller
+     * @param name - name of shown statistic
+     * @param value - value of shown statistic
+     */
     public void showStat(String name, String value) {
         System.out.println(name+": "+value);
     }

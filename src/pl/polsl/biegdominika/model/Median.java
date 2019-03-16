@@ -1,22 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pl.polsl.biegdominika.model;
 
 import java.util.List;
 
 /**
- *
- * @author Dominika
+ * Class responsible for logic of calculating the value of median
+ * @author Dominika Bieg
+ * @version 1.0.0
  */
 public class Median implements StatisticInterface{
 
     private final double median;
+    /**
+     * 
+     * @param data - list of doubles typed by the user
+     */
     Median(List<Double> data) {
 
-        //sort data from the smallest to the biggest value
+        //sorting data from the smallest to the biggest value
         data.sort((a, b) -> a.compareTo(b));
         int n = data.size();
        
@@ -34,22 +35,30 @@ public class Median implements StatisticInterface{
             median=data.get(n/2);
         }
     }
-
+/**
+ * getter created in order to share value with other classes
+ * @return median - the value of the median 
+ */
     public double getMedian() {
         return median;
     }
 
-        //methods inserted by implementation of StatisticInterface
 
+//methods inserted by implementation of StatisticInterface
+    /**
+     * 
+     * @return "Median" - the name of calculated statistic
+     */
     @Override
     public String getName() {
-  //returning name of the calculated value
     return "Median";    
     }
-
+/**
+ * 
+ * @return String.valueOf(median) - calculated value of median converted into the string in order to display it easier
+ */
     @Override
     public String getValue() {
-//the double variable must be converted into the string so it can be showed easier
         return String.valueOf(median);
     }
     
