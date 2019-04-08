@@ -59,6 +59,8 @@ public class StandardDeviation implements StatisticInterface {
     
 //methods inserted by implementation of StatisticInterface
     /**
+     * methods inserted by implementation of StatisticInterface
+     * fields needed to display name of standard deviaion
      * @return "Standard Deviation" - the name of calucated statistic
      */
     @Override
@@ -67,7 +69,8 @@ public class StandardDeviation implements StatisticInterface {
     return "Standard Deviation"; 
     }
 /**
- * 
+ * methods inserted by implementation of StatisticInterface
+ * fields needed to display value of standard deviaion
  * @return String.valueOf(standardDeviation) - the value of standard deviation converted into the string so it can be showed easier
  */
     @Override

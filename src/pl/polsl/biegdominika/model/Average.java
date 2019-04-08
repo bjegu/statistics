@@ -35,9 +35,9 @@ public class Average implements StatisticInterface{
         return average;
     }
 
-    //methods inserted by implementation of StatisticInterface
     /**
-     * 
+     * methods inserted by implementation of StatisticInterface
+     * fields needed to display name of average
      * @return "Average" as a title of given statistic
      */
     @Override
@@ -47,7 +47,8 @@ public class Average implements StatisticInterface{
     }
 
     /**
-     * 
+     * methods inserted by implementation of StatisticInterface
+     * fields needed to display value of average
      * @return String.valueOf(average) - the value og the average converted into the string 
      */
     @Override

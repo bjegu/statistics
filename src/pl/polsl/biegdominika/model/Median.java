@@ -15,7 +15,7 @@ public class Median implements StatisticInterface{
    */
     private final double median;
     /**
-     * 
+     * calculating the value of median
      * @param data - list of doubles typed by the user
      */
     Median(List<Double> data) {
@@ -47,19 +47,20 @@ public class Median implements StatisticInterface{
     }
 
 
-//methods inserted by implementation of StatisticInterface
     /**
-     * 
+     * methods inserted by implementation of StatisticInterface
+     * fields needed to display name of median
      * @return "Median" - the name of calculated statistic
      */
     @Override
     public String getName() {
     return "Median";    
     }
-/**
- * 
- * @return String.valueOf(median) - calculated value of median converted into the string in order to display it easier
- */
+    /**
+    * methods inserted by implementation of StatisticInterface
+     * fields needed to display value of median
+     * @return String.valueOf(median) - calculated value of median converted into the string in order to display it easier
+     */
     @Override
     public String getValue() {
         return String.valueOf(median);

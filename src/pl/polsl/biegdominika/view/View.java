@@ -45,6 +45,6 @@ public class View {
 
     public void inputException() {
         System.out.println("Error");
-        System.out.println("Please check if your numbers are correct and separated by space!");
+        System.out.println("Please check if your numbers are correct and separated by space!!");
     }
 }
