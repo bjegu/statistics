@@ -7,7 +7,14 @@ package pl.polsl.biegdominika.model;
  */
 
 public interface StatisticInterface {
-    
+    /**
+     * 
+     * @return name of the function
+     */
     String getName();
+    /**
+     * 
+     * @return value of the statistics
+     */
     String getValue();
 }
